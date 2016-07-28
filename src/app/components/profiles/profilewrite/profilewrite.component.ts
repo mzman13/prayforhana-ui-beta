@@ -23,12 +23,12 @@ export class ProfilewriteComponent implements OnInit {
     this.postService
         .createPost(input)
         .subscribe(res => {
-          this.router.navigate(['/profile/me']);
+          this.router.navigate(['/me']);
         })
   }
 
   goBack() {
-    this.router.navigate(['/profile/me']);
+    this.router.navigate(['/me']);
   }
 
 }

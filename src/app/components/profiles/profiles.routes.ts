@@ -7,7 +7,7 @@ import { ProfilewriteComponent }    from './profilewrite/profilewrite.component'
 
 export const ProfilesRoutes = [
   {
-    path: 'profiles/me',
+    path: 'me',
     component: MyprofileComponent
   }, {
     path: 'profiles/:profile_id',
