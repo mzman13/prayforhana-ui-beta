@@ -1,0 +1,46 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+
+  <div class="text-xs-center centerPiece">
+    <h2> Groups </h2>
+    <a class="nav-link" [routerLink]="['/creategroup']"> Create a Group </a>
+  </div>
+
+  <div class="col-md-6 col-md-offset-3 yourGroups" *ngIf="adminGroups.length > 0">
+    <div *ngFor="let group of adminGroups">
+      <div class="card card-block">
+        <h5 class="card-title">
+          <a class="name" (click)="viewGroup(group._id)">
+            {{group.name}}
+          </a>
+        </h5>
+        <p class="card-text level">
+          Admin
+        </p>
+        <p class="card-text">
+          {{group.description}}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6 col-md-offset-3 yourGroups" *ngIf="memberGroups.length > 0">
+    <div *ngFor="let group of memberGroups">
+      <div class="card card-block">
+        <h5 class="card-title">
+          <a class="name" (click)="viewGroup(group._id)">
+            {{group.name}}
+          </a>
+        </h5>
+        <p class="card-text level">
+          Member
+        </p>
+        <p class="card-text">
+          {{group.description}}
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>

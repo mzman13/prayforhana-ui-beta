@@ -43,6 +43,11 @@ var barrels = [
     'app/pagecreate',
     'app/profilewrite',
     'app/profilepostedit',
+    'app/groups',
+    'app/ng',
+    'app/groupcreate',
+    'app/groupwrite',
+    'app/group',
 ];
 var cliSystemConfigPackages = {};
 barrels.forEach(function (barrelName) {
