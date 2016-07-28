@@ -1,0 +1,61 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+
+  <div class="text-xs-center centerPiece">
+    <h2>Search</h2>
+  </div>
+
+  <div class="center-block">
+    <form #searchForm="ngForm" (ngSubmit)="submit(searchForm.value)" class="form-inline text-xs-center">
+      <div class="form-group">
+        <input type="text" class="form-control" id="query" ngControl="query">
+      </div>
+      <div class="form-group">
+        <select class="c-select" ngControl="option">
+          <option value="users" selected>Users</option>
+          <option value="pages">Pages</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary-outline">Search</button>
+    </form>
+  </div>
+
+  <div class="text-xs-center">
+    {{ msg }}
+  </div>
+
+  <div class="col-md-6 col-md-offset-3">
+    <div *ngFor="let user of users">
+      <div class="card card-block">
+        <h5 class="card-title">
+          <a class="name" (click)="viewUser(user._id)">
+            {{ user.name }}
+          </a>
+        </h5>
+        <div class="description">
+          {{ user.bio }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6 col-md-offset-3">
+    <div *ngFor="let page of pages">
+      <div class="card card-block">
+        <div class="pull-xs-right">
+              {{page.followers.length}} followers
+        </div>
+        <h5 class="card-title">
+          <a class="name" (click)="viewPage(page._id)">
+            {{ page.name }}
+          </a>
+        </h5>
+        <div class="description">
+          {{ page.description }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

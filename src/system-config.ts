@@ -43,6 +43,14 @@ const barrels: string[] = [
   'app/navbar',
   'app/confirm',
   'app/home',
+  'app/profile',
+  'app/myprofile',
+  'app/profiles',
+  'app/search',
+  'app/pagewrite',
+  'app/pagecreate',
+  'app/profilewrite',
+  'app/profilepostedit',
   /** @cli-barrel */
 ];
 

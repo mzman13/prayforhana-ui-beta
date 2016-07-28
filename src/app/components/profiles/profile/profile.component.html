@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+
+  <div class="text-xs-center centerPiece">
+    <h2> {{ name }} </h2>
+    <div class="description"> {{ bio }} </div>
+    <button class="btn btn-secondary btn-sm" *ngIf="level=='notFollowing'" (click)="follow()">Follow</button>
+    <button class="btn btn-secondary btn-sm" *ngIf="level=='following'" (click)="unfollow()">Following</button>
+  </div>
+
+  <div class="posts col-md-6 col-md-offset-3">
+    <div *ngFor="let post of posts">
+      <div class="card">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <h4 class="card-title">{{post.subject}}</h4>
+            {{post.story}}
+          </li>
+          <li class="list-group-item">{{post.prayer}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>

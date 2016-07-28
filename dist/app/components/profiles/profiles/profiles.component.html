@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+
+  <div class="text-xs-center centerPiece">
+    <h2>Profiles</h2>
+  </div>
+
+  <div class="col-md-6 col-md-offset-3">
+    <div *ngFor="let profile of profiles">
+      <div class="card card-block">
+        <h5 class="card-title">
+          <a class="name" (click)="viewProfile(profile._id)">
+            {{profile.name}}
+          </a>
+        </h5>
+        <p class="card-text">
+          {{profile.bio}}
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>

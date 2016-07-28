@@ -35,6 +35,14 @@ var barrels = [
     'app/navbar',
     'app/confirm',
     'app/home',
+    'app/profile',
+    'app/myprofile',
+    'app/profiles',
+    'app/search',
+    'app/pagewrite',
+    'app/pagecreate',
+    'app/profilewrite',
+    'app/profilepostedit',
 ];
 var cliSystemConfigPackages = {};
 barrels.forEach(function (barrelName) {
