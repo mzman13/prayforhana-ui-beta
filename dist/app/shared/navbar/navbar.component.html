@@ -1,28 +1,28 @@
 <nav class="navbar navbar-light bg-faded" style="background-color: #ffffff;">
   <ul class="nav navbar-nav pull-xs-right">
     <li class="nav-item">
-      <a class="nav-link" [routerLink]="['/home']">Home</a>
+      <a class="nav-link"  [routerLinkActive]="['active']" [routerLink]="['/home']">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" [routerLink]="['/profiles/me']">Me</a>
+      <a class="nav-link" [routerLinkActive]="['active']" [routerLink]="['/me']">Me</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" [routerLink]="['/profiles']">Profiles</a>
+      <a class="nav-link" [routerLinkActive]="['active']" [routerLink]="['/profiles']">Profiles</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" [routerLink]="['/pages']">Pages</a>
+      <a class="nav-link" [routerLinkActive]="['active']" [routerLink]="['/pages']">Pages</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" [routerLink]="['/groups']">Groups</a>
+      <a class="nav-link" [routerLinkActive]="['active']" [routerLink]="['/groups']">Groups</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" [routerLink]="['/search']">Search</a>
+      <a class="nav-link" [routerLinkActive]="['active']" [routerLink]="['/search']">Search</a>
     </li>
     <!--<li class="nav-item">
-      <a class="nav-link" [routerLink]="['/settings']">Settings</a>
+      <a class="nav-link" [routerLinkActive]="['active']" [routerLink]="['/settings']">Settings</a>
     </li>-->
     <li class="nav-item">
-      <a class="nav-link" [routerLink]="['/login']">Logout</a>
+      <a class="nav-link" [routerLinkActive]="['active']" [routerLink]="['/login']">Logout</a>
     </li>
   </ul>
 </nav>
