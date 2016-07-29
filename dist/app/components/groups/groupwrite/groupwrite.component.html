@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+
+  <div class="col-md-8 col-md-offset-2">
+
+    <form #writeForm="ngForm" (ngSubmit)="submit(writeForm.value)">
+      <div class="form-group">
+        <input type="text" class="form-control" id="subject" placeholder="Subject" ngControl="subject" required>
+      </div>
+      <div class="form-group">
+        <textarea type="text" rows="10" class="form-control" id="story" placeholder="Tell the story ..." ngControl="story" required></textarea>
+      </div>
+      <div class="form-group">
+        <textarea type="text" rows="5" class="form-control" id="request" placeholder="Share how to pray ..." ngControl="prayer" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary-outline btn-sm pull-xs-right">Submit</button>
+      <button (click)="goBack()" class="btn btn-secondary-outline btn-sm pull-xs-right">Cancel</button>
+    </form>
+
+  </div>
+
+</div>

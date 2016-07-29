@@ -4,22 +4,29 @@ import { ProfileposteditComponent } from './profilepostedit/profilepostedit.comp
 import { ProfilesComponent }        from './profiles/profiles.component';
 import { ProfilewriteComponent }    from './profilewrite/profilewrite.component';
 
+import { LoggedInGuard } from '../../shared/loggedinguard';
+
 
 export const ProfilesRoutes = [
   {
     path: 'me',
-    component: MyprofileComponent
+    component: MyprofileComponent,
+    canActivate: [LoggedInGuard]
   }, {
     path: 'profiles/:profile_id',
-    component: ProfileComponent
+    component: ProfileComponent,
+    canActivate: [LoggedInGuard]
   }, {
     path: 'edit/:post_id',
-    component: ProfileposteditComponent
+    component: ProfileposteditComponent,
+    canActivate: [LoggedInGuard]
   }, {
     path: 'profiles',
-    component: ProfilesComponent
+    component: ProfilesComponent,
+    canActivate: [LoggedInGuard]
   }, {
     path: 'write',
-    component: ProfilewriteComponent
+    component: ProfilewriteComponent,
+    canActivate: [LoggedInGuard]
   }
 ];

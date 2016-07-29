@@ -8,6 +8,7 @@ export class LoggedInGuard implements CanActivate {
   constructor(private router: Router) {}
 
   canActivate() {
+    localStorage.getItem('hana_auth_token')
     if (localStorage.getItem('hana_auth_token')) {
       return true
     } else {
