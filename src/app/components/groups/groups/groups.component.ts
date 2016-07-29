@@ -9,7 +9,8 @@ import { NavbarComponent } from '../../../shared/navbar/navbar.component';
   moduleId: module.id,
   selector: 'app-groups',
   templateUrl: 'groups.component.html',
-  styleUrls: ['groups.component.css']
+  styleUrls: ['groups.component.css'],
+  directives: [ROUTER_DIRECTIVES, NavbarComponent]
 })
 export class GroupsComponent implements OnInit {
 

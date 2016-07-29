@@ -1,8 +1,11 @@
-import { HomeComponent } from './home.component';
+import { HomeComponent }    from './home.component';
+import { LoggedInGuard } from '../../shared/loggedinguard';
+
 
 export const HomeRoutes = [
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
+    canActivate: [LoggedInGuard]
   }
 ];

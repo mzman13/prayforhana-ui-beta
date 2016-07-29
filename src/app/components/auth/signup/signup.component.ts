@@ -8,7 +8,7 @@ import { AuthService } from '../../../shared/services/auth.service';
   moduleId: module.id,
   selector: 'app-signup',
   templateUrl: 'signup.component.html',
-  styleUrls: ['signup.component.css']
+  styleUrls: ['../auth.css']
 })
 export class SignupComponent implements OnInit {
 
@@ -21,7 +21,6 @@ export class SignupComponent implements OnInit {
     this.authService
         .register(input)
         .subscribe(res => {
-          localStorage.setItem('auth_token', res.token);
           this.router.navigate(['/home']);
         })
   }

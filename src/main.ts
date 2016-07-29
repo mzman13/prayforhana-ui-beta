@@ -4,7 +4,6 @@ import { enableProdMode } from '@angular/core';
 import { AppComponent, environment } from './app/';
 import { APP_ROUTER_PROVIDERS }      from './app/app.routes';
 
-
 if (environment.production) {
   enableProdMode();
 }

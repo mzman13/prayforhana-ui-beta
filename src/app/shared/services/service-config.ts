@@ -10,7 +10,7 @@ export class ServiceConfig {
 
   public static createHeader() {
 		let headers = new Headers();
-  	let authToken = localStorage.getItem('auth_token');
+  	let authToken = localStorage.getItem('hana_auth_token');
   	headers.append('Authorization', `Bearer ${authToken}`);
 		return headers;
 	}

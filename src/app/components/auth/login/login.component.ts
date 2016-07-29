@@ -8,20 +8,23 @@ import { AuthService } from '../../../shared/services/auth.service';
   moduleId: module.id,
   selector: 'app-login',
   templateUrl: 'login.component.html',
-  styleUrls: ['login.component.css']
+  styleUrls: ['../auth.css']
 })
 export class LoginComponent implements OnInit {
 
   constructor(private authService: AuthService,
               private router: Router) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    if (localStorage.getItem('hana_auth_token')) {
+      this.router.navigate(['/home']);
+    }
+  }
 
   login(input) {
     this.authService
         .login(input)
         .subscribe(res => {
-          localStorage.setItem('auth_token', res.token);
           this.router.navigate(['/home']);
         })
   }
