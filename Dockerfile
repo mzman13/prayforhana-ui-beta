@@ -1,11 +1,4 @@
-FROM node:6.3.1-slim
-
-RUN npm install -g angular-cli
-
-COPY ./dist /dist/
-
-WORKDIR /dist
-
-EXPOSE 4200
-
-CMD ["ng", "serve", "--prod"]
+FROM nginx:1.11
+COPY dist /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/nginx.conf
+CMD ["nginx"]
