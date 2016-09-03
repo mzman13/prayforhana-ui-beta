@@ -5,8 +5,9 @@ import { Observable } from 'rxjs/Observable';
 
 export class ServiceConfig {
 
-  //static URL = 'http://localhost:3000/api/';  // URL to web api
-  static URL = 'http://prayforhana-loadbalancer-563429289.us-east-1.elb.amazonaws.com/api/';  // URL to web api
+  //static URL = 'http://localhost:3000/api/';  // URL to web api (local dev)
+  //static URL = 'http://192.168.99.100/api/';  // URL to web api (local docker dev)
+  static URL = 'http://prayforhana.org/api/';   // URL to web api (prod)
 
   public static createHeader() {
 		let headers = new Headers();
