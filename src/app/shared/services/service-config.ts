@@ -6,13 +6,13 @@ import { Observable } from 'rxjs/Observable';
 export class ServiceConfig {
 
   //static URL = 'http://localhost:3000/api/';  // URL to web api (local dev)
-  //static URL = 'http://192.168.99.100/api/';  // URL to web api (local docker dev)
-  static URL = 'http://prayforhana.org/api/';   // URL to web api (prod)
+  static URL = 'http://192.168.99.102/api/';  // URL to web api (local docker dev)
+  //static URL = 'https://prayforhana.org/api/';   // URL to web api (prod)
 
   public static createHeader() {
 		let headers = new Headers();
   	let authToken = localStorage.getItem('hana_auth_token');
-  	headers.append('Authorization', `Bearer ${authToken}`);
+  	headers.append('hanaauthtoken', `${authToken}`);
 		return headers;
 	}
 
